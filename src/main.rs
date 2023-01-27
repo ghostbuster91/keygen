@@ -65,7 +65,7 @@ fn main()
 	// Read layout, if applicable.
 	let _layout;
 	let layout = match matches.free.get(1) {
-		None => &layout::INIT_LAYOUT,
+		None => &layout::KAS_LAYOUT2,
 		Some(layout_filename) => {
 			let mut f = match File::open(layout_filename) {
 				Ok(f) => f,
@@ -103,7 +103,7 @@ fn main()
 fn run(s: &str, layout: &layout::Layout, debug: bool, top: usize, swaps: usize)
 {
 	let penalties = penalty::init();
-	let init_pos_map = layout::INIT_LAYOUT.get_position_map();
+	let init_pos_map = layout::KAS_LAYOUT2.get_position_map();
 	let quartads = penalty::prepare_quartad_list(s, &init_pos_map);
 	let len = s.len();
 
@@ -167,12 +167,20 @@ fn run_ref(s: &str)
 	let penalty = penalty::calculate_penalty(&quartads, len, &layout::INIT_LAYOUT, &penalties, true);
 	println!("Reference: INITIAL");
 	simulator::print_result(&layout::INIT_LAYOUT, &penalty);
+
+	let penalty = penalty::calculate_penalty(&quartads, len, &layout::KAS_LAYOUT, &penalties, true);
+	println!("Reference: KAS");
+	simulator::print_result(&layout::KAS_LAYOUT, &penalty);
+
+	let penalty = penalty::calculate_penalty(&quartads, len, &layout::KAS_LAYOUT2, &penalties, true);
+	println!("Reference: KAS2");
+	simulator::print_result(&layout::KAS_LAYOUT2, &penalty);
 }
 
 fn refine(s: &str, layout: &layout::Layout, debug: bool, top: usize, swaps: usize)
 {
 	let penalties = penalty::init();
-	let init_pos_map = layout::INIT_LAYOUT.get_position_map();
+	let init_pos_map = layout::KAS_LAYOUT3.get_position_map();
 	let quartads = penalty::prepare_quartad_list(s, &init_pos_map);
 	let len = s.len();
 

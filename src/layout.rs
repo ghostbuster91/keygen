@@ -97,6 +97,33 @@ pub static INIT_LAYOUT: Layout = Layout(
 	              '?', 'V', 'G', 'P', 'B',   'X', 'W', '>', ':', '_',
 	              'E', ' '])));
 
+pub static KAS_LAYOUT: Layout = Layout(
+	Layer(KeyMap(['-', 'c', 'y', 'f', 'k',   'z', 'l', 'q', 'u', ';', '=',
+	              'r', 's', 't', 'h', 'd',   'm', 'n', 'a', 'i', 'o',  '\'',
+	              'j', 'v', 'g', 'p', 'b',   'x', 'w', ',', '.', '/',
+	              'e', ' '])),
+	Layer(KeyMap(['_', 'C', 'Y', 'F', 'K',   'Z', 'L', 'Q', 'U', 'Q', '+',
+	              'R', 'S', 'T', 'H', 'D',   'M', 'N', 'A', 'I', 'O', '"',
+	              'J', 'V', 'G', 'P', 'B',   'X', 'W', '<', '>', '?',
+	              'E', ' '])));
+pub static KAS_LAYOUT2: Layout = Layout(
+	Layer(KeyMap(['-', 'c', 'y', 'f', 'k',   'z', 'l', 'q', 'u', ';', '=',
+	              'r', 's', 't', 'h', 'p',   'm', 'n', 'a', 'i', 'o',  '\'',
+	              'j', 'v', 'g', 'd', 'b',   'x', 'w', ',', '.', '/',
+	              'e', ' '])),
+	Layer(KeyMap(['_', 'C', 'Y', 'F', 'K',   'Z', 'L', 'Q', 'U', ':', '+',
+	              'R', 'S', 'T', 'H', 'P',   'M', 'N', 'A', 'I', 'O', '"',
+	              'J', 'V', 'G', 'D', 'B',   'X', 'W', '<', '>', '?',
+	              'E', ' '])));
+pub static KAS_LAYOUT3: Layout = Layout(
+	Layer(KeyMap(['-', 'c', 'g', 'f', 'k',   'z', 'l', 'q', 'u', ';', '=',
+	              'r', 's', 't', 'h', 'p',   'm', 'n', 'a', 'i', 'o',  '\'',
+	              'j', 'v', 'y', 'd', 'b',   'x', 'w', ',', '.', '/',
+	              'e', ' '])),
+	Layer(KeyMap(['_', 'C', 'G', 'F', 'K',   'Z', 'L', 'Q', 'U', ':', '+',
+	              'R', 'S', 'T', 'H', 'P',   'M', 'N', 'A', 'I', 'O', '"',
+	              'J', 'V', 'G', 'D', 'B',   'X', 'W', '<', '>', '?',
+	              'E', ' '])));
 pub static QWERTY_LAYOUT: Layout = Layout(
 	Layer(KeyMap(['q', 'w', 'e', 'r', 't',   'y', 'u', 'i', 'o', 'p', '-',
 	              'a', 's', 'd', 'f', 'g',   'h', 'j', 'k', 'l', ';', '\'',
